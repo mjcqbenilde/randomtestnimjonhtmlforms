@@ -1,0 +1,143 @@
+@font-face {
+    font-family: "Staatliches";
+    src: url(Staatliches.ttf);
+}
+@font-face {
+    font-family: "Manrope";
+    src: url(Manrope.ttf);
+}
+
+body {
+    font-family: "Manrope", sans-serif;
+    background-color: #151514;
+    color: #ddd;
+    margin: 0;
+}
+
+.wrapper {
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+p {
+    font-family: "Staatliches", sans-serif;
+    font-size: 64px;
+    color: #268d7b;
+    border-bottom: #268d7b 5px solid;
+    max-width: 150px;
+    margin: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+input[type="text"],
+input[type="number"],
+input[type="url"],
+input[type="email"],
+select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+.radio-group, .checkbox-group {
+    margin-top: 5px;
+}
+.radio-group label, .checkbox-group label {
+    font-weight: normal;
+    display: inline;
+    margin-left: 5px;
+}
+.error {
+    color: rgb(114, 114, 114);
+    font-size: 0.9em;
+    margin-top: 5px;
+}
+button {
+    background-color: #268d7b;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    float: right;
+    margin-right: 20px; margin-bottom: 20px;
+}
+button:hover {
+    background-color: #74c5b6;
+}
+.required:after {
+    content: " *";
+    color: rgb(85, 85, 85);
+}
+
+.form {
+    display: flex;
+    justify-content: center;
+}
+
+.left, .right {
+    width: 600px;
+    margin: 20px;
+}
+
+.radios{
+    display: flex;
+    justify-content: space-between;
+}
+
+.transferee-checkbox-group {
+    display: flex;
+}
+.transferee-checkbox-group .checkbox-group{
+    margin-right: 20px;
+}
+
+.section-choices{
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 20px;
+}
+
+.section-choices .section-group{
+    margin-right: 10px;
+}
+
+.section-choices .section-group:last-child{
+    margin-right: 0;
+}
+
+@media only screen and (max-width: 850px) {
+    .form {
+        flex-direction: column;
+    }
+    .left, .right {
+        width: calc(100% - 40px);
+        margin-top: 0;
+    }
+    button{
+        float: left;
+        margin-left: 20px;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .section-choices{
+        flex-direction: column;
+    }
+    .section-choices .section-group{
+        margin-right: 0;
+    }
+}
+@media only screen and (max-width: 420px) {
+    .radios{
+        flex-direction: column;
+    }
+}

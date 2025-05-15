@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Student Information Form</title>
+        <link rel="stylesheet" href="style.css">
+
+    </head>
+    <body>
+        <section class="submission">
+            <div class="wrapper">
+                <p>Submission</p>
+                <form id="studentForm" method="POST"
+                    action="https://script.google.com/macros/s/AKfycbzjvPXlFvoP2Sssg_6PZdWIqIj_1brGST6J86TNkPNXI8bLjZwdG1jbFQ9H5-l7sfIn/exec">
+                    <div class="form">
+                        <div class="left">
+                            <!-- Name -->
+                            <div class="form-group name">
+                                <label for="name" class="required">Name</label>
+                                <input type="text" id="name" name="Name"
+                                    placeholder="Surname, First name" required>
+                                <div class="error" id="nameError"></div>
+                            </div>
+
+                            <!-- Nickname -->
+                            <div class="form-group nickname">
+                                <label for="nickname"
+                                    class="required">Nickname</label>
+                                <input type="text" id="nickname" name="Nickname"
+                                    placeholder="What would we like to call you?"
+                                    required>
+                                <div class="error" id="nicknameError"></div>
+                            </div>
+
+                            <!-- ID Number -->
+                            <div class="form-group id-number">
+                                <label for="idNumber" class="required">ID
+                                    Number</label>
+                                <input type="number" id="idNumber"
+                                    name="ID Number"
+                                    placeholder="ex. 12032456" required>
+                                <div class="error" id="idNumberError"></div>
+                            </div>
+
+                            <!-- Benilde Email Address -->
+                            <div class="form-group benilde-email">
+                                <label for="email" class="required">Benilde
+                                    Email
+                                    Address</label>
+                                <input type="email" id="email"
+                                    name="Benilde Email"
+                                    placeholder="ex. username@benilde.edu.ph"
+                                    required>
+                                <div class="error" id="emailError"></div>
+                            </div>
+
+                            <!-- Degree Program -->
+                            <div class="form-group degree-program">
+                                <label for="degreeProgram"
+                                    class="required">Degree
+                                    Program</label>
+                                <select id="degreeProgram" name="Degree Program"
+                                    required>
+                                    <option value>-- Select Degree Program
+                                        --</option>
+                                    <option value="ABCIM">ABCIM</option>
+                                    <option value="BPA-D">BPA-D</option>
+                                    <option value="BFA CBA">BFA CBA</option>
+                                    <option value="BAMP">BAMP</option>
+                                    <option value="AB-PRD">AB-PRD</option>
+                                    <option value="ABTHA">ABTHA</option>
+                                    <option value="BAPDST">BAPDST</option>
+                                    <option value="BSLI">BSLI</option>
+                                    <option value="AB-DIA">AB-DIA</option>
+                                    <option value="AB-GPA">AB-GPA</option>
+                                    <option value="BS-ARCH">BS-ARCH</option>
+                                    <option value="AB-FDM">AB-FDM</option>
+                                    <option value="BS-ID">BS-ID</option>
+                                    <option value="BS IND">BS IND</option>
+                                    <option value="BS-CAM">BS-CAM</option>
+                                    <option value="BS-HLM">BS-HLM</option>
+                                    <option value="BSTM">BSTM</option>
+                                    <option value="BS-IHM">BS-IHM</option>
+                                    <option value="BSBA-BIA">BSBA-BIA</option>
+                                    <option value="BSBA">BSBA</option>
+                                    <option value="BSAA">BSAA</option>
+                                    <option value="BSCSEC">BSCSEC</option>
+                                    <option value="BS-IS">BS-IS</option>
+                                    <option value="BS-GDD">BS-GDD</option>
+                                    <option value="B-HOLD">B-HOLD</option>
+                                    <option value="AiA">AiA</option>
+                                    <option value="ABANI">ABANI</option>
+                                    <option value="ABFILM">ABFILM</option>
+                                    <option value="ABMMA">ABMMA</option>
+                                    <option value="ABPHOTO">ABPHOTO</option>
+                                </select>
+                            </div>
+
+                            <!-- Nationality -->
+                            <div class="form-group nationality">
+                                <label for="nationality"
+                                    class="required">Nationality</label>
+                                <input type="text" id="nationality"
+                                    name="Nationality"
+                                    placeholder="ex. Filipino" required>
+                                <div class="error" id="nationalityError"></div>
+                            </div>
+
+                            <div class="radios">
+                                <!-- Enrollment Status -->
+                                <div class="form-group enrollment-status">
+                                    <label class="required">Enrollment
+                                        Status</label>
+                                    <div class="radio-group">
+                                        <input type="radio" id="enrolled"
+                                            name="Enrollment Status"
+                                            value="Yes" required>
+                                        <label for="enrolled">Enrolled this
+                                            term</label>
+                                    </div>
+                                    <div class="radio-group">
+                                        <input type="radio" id="notEnrolled"
+                                            name="Enrollment Status"
+                                            value="No">
+                                        <label for="notEnrolled">NOT Enrolled this
+                                            term</label>
+                                    </div>
+                                </div>
+                                
+                                <!-- Applicant Type -->
+                                <div class="form-group applicant-type">
+                                    <label class="required">Applicant Type</label>
+                                    <div class="radio-group">
+                                        <input type="radio" id="newApplicant"
+                                            name="Applicant Type"
+                                            value="New Applicant"
+                                            required>
+                                        <label for="newApplicant">New
+                                            Applicant</label>
+                                    </div>
+                                    <div class="radio-group">
+                                        <input type="radio" id="formerApplicant"
+                                            name="Applicant Type"
+                                            value="Former Applicant">
+                                        <label for="formerApplicant">Former
+                                            Applicant</label>
+                                    </div>
+                                    <div class="radio-group">
+                                        <input type="radio" id="returningMember"
+                                            name="Applicant Type"
+                                            value="Returning Member">
+                                        <label for="returningMember">Returning
+                                            Member</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="right">
+                            <!-- Transferee/Second Degree -->
+                            <div class="form-group">
+                                <label>Transferee/Second Degree<br></label>
+                                <div class="transferee-checkbox-group">
+                                    <div class="checkbox-group">
+                                        <input type="checkbox" id="transferee"
+                                            name="Transferee"
+                                            value="Transferee">
+                                        <label
+                                            for="transferee">Transferee</label>
+                                    </div>
+                                    <div class="checkbox-group">
+                                        <input type="checkbox" id="secondDegree"
+                                            name="Second Degree"
+                                            value="Second Degree">
+                                        <label for="secondDegree">Second
+                                            Degree</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Contact Number -->
+                            <div class="form-group contact-number">
+                                <label for="contactNumber"
+                                    class="required">Contact
+                                    Number</label>
+                                <input type="number" id="contactNumber"
+                                    name="Contact Number"
+                                    placeholder="09XXXXXXXXX"
+                                    required>
+                                <div class="error"
+                                    id="contactNumberError"></div>
+                            </div>
+
+                            <!-- Facebook Link -->
+                            <div class="form-group facebook-link">
+                                <label for="facebookLink"
+                                    class="required">Facebook
+                                    Link</label>
+                                <input type="url" id="facebookLink"
+                                    name="FB Link"
+                                    placeholder="https://www.facebook.com/my.profilelink/"
+                                    required>
+                                <div class="error" id="facebookLinkError"></div>
+                            </div>
+
+                            <!-- Number of terms left -->
+                            <div class="form-group terms-left">
+                                <label for="termsLeft" class="required">Number
+                                    of
+                                    terms
+                                    left</label>
+                                <input type="number" id="termsLeft"
+                                    name="No. of Terms Left" min="1" max="15"
+                                    placeholder="How many terms until you graduate?"
+                                    required>
+                                <div class="error" id="termsLeftError"></div>
+                            </div>
+
+                            <!-- Scholarship Status -->
+                            <div class="form-group scholarship-status">
+                                <label>Scholarship Status</label>
+                                <div class="checkbox-group">
+                                    <input type="checkbox" id="isScholar"
+                                        name="Scholarship Status">
+                                    <label for="isScholar">I am a
+                                        scholar</label>
+                                </div>
+                                <input type="text" id="scholarshipDetails"
+                                    name="scholarshipDetails"
+                                    placeholder="Please indicate here the scholarship you are currently under in."
+                                    disabled>
+                            </div>
+
+                            <!-- Section Choices -->
+                            <div class="form-group">
+                                <label class="required">Section Choices</label>
+                                <div class="section-choices">
+                                    <div class="section-group" style="margin-bottom: 10px;">
+                                        <select id="sectionChoice1"
+                                            name="First choice"
+                                            required>
+                                            <option value>-- Select first choice
+                                                --</option>
+                                            <option value="Pulse">Pulse (News
+                                                Writer)</option>
+                                            <option value="BLIP">BLIP (Features
+                                                Writer)</option>
+                                            <option value="Karilyon">Karilyon
+                                                (Manunulat)</option>
+                                            <option value="Ablaze">Ablaze
+                                                (Sports
+                                                Writer)</option>
+                                            <option value="Layout">Layout
+                                                (Layout
+                                                Artist)</option>
+                                            <option value="Video">Video (Video
+                                                Producer)</option>
+                                            <option
+                                                value="Art and Design - Graphic Designer">Art
+                                                and Design (Graphic
+                                                Designer)</option>
+                                            <option
+                                                value="Art and Design - Illustrator">Art
+                                                and Design
+                                                (Illustrator)</option>
+                                            <option
+                                                value="Digital Media - Web Developer">Digital
+                                                Media (Web Developer)</option>
+                                            <option
+                                                value="Digital Media - Social Media Correspondence">Digital
+                                                Media (Social Media
+                                                Correspondence)</option>
+                                            <option
+                                                value="Managing">Managing</option>
+                                        </select>
+                                    </div>
+                                    <div class="section-group" style="margin-bottom: 10px;">
+                                        <select id="sectionChoice2"
+                                            name="Second Choice"
+                                            required>
+                                            <option value>-- Select second
+                                                choice
+                                                --</option>
+                                            <option value="N/A">N/A</option>
+                                            <option value="Pulse">Pulse</option>
+                                            <option value="BLIP">BLIP</option>
+                                            <option
+                                                value="Karilyon">Karilyon</option>
+                                            <option
+                                                value="Ablaze">Ablaze</option>
+                                            <option
+                                                value="Layout">Layout</option>
+                                            <option value="Video">Video</option>
+                                            <option
+                                                value="Art and Design - Graphic Designer">Art
+                                                and Design - Graphic
+                                                Designer</option>
+                                            <option
+                                                value="Art and Design - Illustrator">Art
+                                                and Design -
+                                                Illustrator</option>
+                                            <option
+                                                value="Digital Media - Web Developer">Digital
+                                                Media - Web Developer</option>
+                                            <option
+                                                value="Digital Media - Social Media Correspondence">Digital
+                                                Media - Social Media
+                                                Correspondence</option>
+                                            <option
+                                                value="Managing">Managing</option>
+                                        </select>
+                                    </div>
+                                    <div class="section-group">
+                                        <select id="sectionChoice3"
+                                            name="Third Choice"
+                                            required>
+                                            <option value>-- Select third choice
+                                                --</option>
+                                            <option value="N/A">N/A</option>
+                                            <option value="Pulse">Pulse</option>
+                                            <option value="BLIP">BLIP</option>
+                                            <option
+                                                value="Karilyon">Karilyon</option>
+                                            <option
+                                                value="Ablaze">Ablaze</option>
+                                            <option
+                                                value="Layout">Layout</option>
+                                            <option value="Video">Video</option>
+                                            <option
+                                                value="Art and Design - Graphic Designer">Art
+                                                and Design - Graphic
+                                                Designer</option>
+                                            <option
+                                                value="Art and Design - Illustrator">Art
+                                                and Design -
+                                                Illustrator</option>
+                                            <option
+                                                value="Digital Media - Web Developer">Digital
+                                                Media - Web Developer</option>
+                                            <option
+                                                value="Digital Media - Social Media Correspondence">Digital
+                                                Media - Social Media
+                                                Correspondence</option>
+                                            <option
+                                                value="Managing">Managing</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Google Drive Link -->
+                            <div class="form-group">
+                                <label for="googleDriveLink"
+                                    class="required">Google
+                                    Drive Link</label>
+                                <input type="url" id="googleDriveLink"
+                                    name="GDrive Link"
+                                    placeholder="https://drive.google.com/my.drive.link/"
+                                    required>
+                                <div class="error"
+                                    id="googleDriveLinkError"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </section>
+
+        <script src="script.js"></script>
+    </body>
+</html>
