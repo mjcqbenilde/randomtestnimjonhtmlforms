@@ -3,16 +3,72 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Submission Form</title>
+        <title>Student Information Form</title>
         <link rel="stylesheet" href="style.css">
 
     </head>
     <body>
-        <section class="submission">
+        <!--Header-->
+
+        <header>
+            <div class="wrapper">
+                <div class="logo">
+                    <img src="assets/icons/logo+name.webp" alt="BPC Logo">
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="#About">About</a></li>
+                        <li><a href="#Releases">Recent Releases</a></li>
+                        <div class="btn"><li><a href="#Submission">Submit</a></li></div>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <!--Testimonials-->
+        <section class="testimonials" id="About">
+            <div class="wrapper">
+                <div class="testimonials-left">
+                    <div class="slideshow">
+                        <div class="slides">
+                            <img src="assets/gallery/00.jpg" alt="Slide 1">
+                            <img src="assets/gallery/01.jpg" alt="Slide 2">
+                            <img src="assets/gallery/02.jpg" alt="Slide 3">
+                            <img src="assets/gallery/03.jpg" alt="Slide 4">
+                            <img src="assets/gallery/04.jpg" alt="Slide 5">
+                            <img src="assets/gallery/05.jpg" alt="Slide 6">
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonials-right">
+                    <p id="About">About the BPC</p>
+                    <div class="bar"></div>
+                    <div class="features">
+                        The <b>Benildean Press Corps (BPC)</b> is the official student-journalists’ organization of De La
+                        Salle-College of Saint Benilde,
+                        cultivating the next generation of journalists and artists. From writing articles that spark conversations to
+                        designing pages that pop,
+                        BPC is all about creativity and expression!<br><br>At the heart of BPC is <b><i>The Benildean</i></b>, the
+                        College’s official student magazine-journal.
+                        But that’s not all! Each year, BPC unleashes an explosion of creativity through other initiatives:
+                        <b><i>Dekunstrukt</i></b> (photography folio),
+                        <b><i>Horizons</i></b> (art folio), and <b><i>Shades of Gray</i></b> (literary folio). It’s all happening here
+                        at BPC—where every story shines
+                        and every voice matters!
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--Sections Information-->
+
+        <!--FAQs-->
+
+        <section class="submission" id="Submission">
             <div class="wrapper">
                 <p>Submission</p>
                 <form id="studentForm" method="POST"
-                    action="https://script.google.com/macros/s/AKfycbzjvPXlFvoP2Sssg_6PZdWIqIj_1brGST6J86TNkPNXI8bLjZwdG1jbFQ9H5-l7sfIn/exec">
+                    action="https://script.google.com/macros/s/AKfycbwLoqSSSYiTQ2eh2qZYX_MbOeFQYq_rGPMjucHf_II9TMlGTHEHO-KuGJxjqEtIX6ZX/exec">
                     <div class="form">
                         <div class="left">
                             <!-- Name -->
@@ -28,7 +84,7 @@
                                 <label for="nickname"
                                     class="required">Nickname</label>
                                 <input type="text" id="nickname" name="Nickname"
-                                    placeholder="What would we like to call you?"
+                                    placeholder="What would you like us to call you?"
                                     required>
                                 <div class="error" id="nicknameError"></div>
                             </div>
@@ -62,8 +118,7 @@
                                     Program</label>
                                 <select id="degreeProgram" name="Degree Program"
                                     required>
-                                    <option value>-- Select Degree Program
-                                        --</option>
+                                    <option value>-- Select Degree Program--</option>
                                     <option value="ABCIM">ABCIM</option>
                                     <option value="BPA-D">BPA-D</option>
                                     <option value="BFA CBA">BFA CBA</option>
@@ -77,14 +132,19 @@
                                     <option value="BS-ARCH">BS-ARCH</option>
                                     <option value="AB-FDM">AB-FDM</option>
                                     <option value="BS-ID">BS-ID</option>
-                                    <option value="BS IND">BS IND</option>
+                                    <option value="BS-IND">BS-IND</option>
                                     <option value="BS-CAM">BS-CAM</option>
                                     <option value="BS-HLM">BS-HLM</option>
                                     <option value="BSTM">BSTM</option>
                                     <option value="BS-IHM">BS-IHM</option>
+                                    <option value="BSBA-BMA">BSBA-BM</option>
+                                    <option value="BSBA-EGBM">BSBA-EGBM</option>
+                                    <option value="BSBA-HRM">BSBA-HRM</option>
+                                    <option value="BSBA-MM">BSBA-MM</option>
+                                    <option value="BS-REM">BS-REM</option>
+                                    <option value="BS-SIE">BS-SIE</option>
                                     <option value="BSBA-BIA">BSBA-BIA</option>
-                                    <option value="BSBA">BSBA</option>
-                                    <option value="BSAA">BSAA</option>
+                                    <option value="BSBA-BSAA">BSBA-BSAA</option>
                                     <option value="BSCSEC">BSCSEC</option>
                                     <option value="BS-IS">BS-IS</option>
                                     <option value="BS-GDD">BS-GDD</option>
@@ -101,10 +161,201 @@
                             <div class="form-group nationality">
                                 <label for="nationality"
                                     class="required">Nationality</label>
-                                <input type="text" id="nationality"
-                                    name="Nationality"
-                                    placeholder="ex. Filipino" required>
-                                <div class="error" id="nationalityError"></div>
+                                <select id="nationality" name="Nationality" required>
+                                    <option value="">-- Select Your Nationality --</option>
+                                    <option value="filipino">Filipino</option>
+                                    <option value="afghan">Afghan</option>
+                                    <option value="albanian">Albanian</option>
+                                    <option value="algerian">Algerian</option>
+                                    <option value="american">American</option>
+                                    <option value="andorran">Andorran</option>
+                                    <option value="angolan">Angolan</option>
+                                    <option value="antiguans">Antiguans</option>
+                                    <option value="argentinean">Argentinean</option>
+                                    <option value="armenian">Armenian</option>
+                                    <option value="australian">Australian</option>
+                                    <option value="austrian">Austrian</option>
+                                    <option value="azerbaijani">Azerbaijani</option>
+                                    <option value="bahamian">Bahamian</option>
+                                    <option value="bahraini">Bahraini</option>
+                                    <option value="bangladeshi">Bangladeshi</option>
+                                    <option value="barbadian">Barbadian</option>
+                                    <option value="barbudans">Barbudans</option>
+                                    <option value="batswana">Batswana</option>
+                                    <option value="belarusian">Belarusian</option>
+                                    <option value="belgian">Belgian</option>
+                                    <option value="belizean">Belizean</option>
+                                    <option value="beninese">Beninese</option>
+                                    <option value="bhutanese">Bhutanese</option>
+                                    <option value="bolivian">Bolivian</option>
+                                    <option value="bosnian">Bosnian</option>
+                                    <option value="brazilian">Brazilian</option>
+                                    <option value="british">British</option>
+                                    <option value="bruneian">Bruneian</option>
+                                    <option value="bulgarian">Bulgarian</option>
+                                    <option value="burkinabe">Burkinabe</option>
+                                    <option value="burmese">Burmese</option>
+                                    <option value="burundian">Burundian</option>
+                                    <option value="cambodian">Cambodian</option>
+                                    <option value="cameroonian">Cameroonian</option>
+                                    <option value="canadian">Canadian</option>
+                                    <option value="cape verdean">Cape Verdean</option>
+                                    <option value="central african">Central African</option>
+                                    <option value="chadian">Chadian</option>
+                                    <option value="chilean">Chilean</option>
+                                    <option value="chinese">Chinese</option>
+                                    <option value="colombian">Colombian</option>
+                                    <option value="comoran">Comoran</option>
+                                    <option value="congolese">Congolese</option>
+                                    <option value="costa rican">Costa Rican</option>
+                                    <option value="croatian">Croatian</option>
+                                    <option value="cuban">Cuban</option>
+                                    <option value="cypriot">Cypriot</option>
+                                    <option value="czech">Czech</option>
+                                    <option value="danish">Danish</option>
+                                    <option value="djibouti">Djibouti</option>
+                                    <option value="dominican">Dominican</option>
+                                    <option value="dutch">Dutch</option>
+                                    <option value="east timorese">East Timorese</option>
+                                    <option value="ecuadorean">Ecuadorean</option>
+                                    <option value="egyptian">Egyptian</option>
+                                    <option value="emirian">Emirian</option>
+                                    <option value="equatorial guinean">Equatorial Guinean</option>
+                                    <option value="eritrean">Eritrean</option>
+                                    <option value="estonian">Estonian</option>
+                                    <option value="ethiopian">Ethiopian</option>
+                                    <option value="fijian">Fijian</option>
+                                    <option value="finnish">Finnish</option>
+                                    <option value="french">French</option>
+                                    <option value="gabonese">Gabonese</option>
+                                    <option value="gambian">Gambian</option>
+                                    <option value="georgian">Georgian</option>
+                                    <option value="german">German</option>
+                                    <option value="ghanaian">Ghanaian</option>
+                                    <option value="greek">Greek</option>
+                                    <option value="grenadian">Grenadian</option>
+                                    <option value="guatemalan">Guatemalan</option>
+                                    <option value="guinea-bissauan">Guinea-Bissauan</option>
+                                    <option value="guinean">Guinean</option>
+                                    <option value="guyanese">Guyanese</option>
+                                    <option value="haitian">Haitian</option>
+                                    <option value="herzegovinian">Herzegovinian</option>
+                                    <option value="honduran">Honduran</option>
+                                    <option value="hungarian">Hungarian</option>
+                                    <option value="icelander">Icelander</option>
+                                    <option value="indian">Indian</option>
+                                    <option value="indonesian">Indonesian</option>
+                                    <option value="iranian">Iranian</option>
+                                    <option value="iraqi">Iraqi</option>
+                                    <option value="irish">Irish</option>
+                                    <option value="israeli">Israeli</option>
+                                    <option value="italian">Italian</option>
+                                    <option value="ivorian">Ivorian</option>
+                                    <option value="jamaican">Jamaican</option>
+                                    <option value="japanese">Japanese</option>
+                                    <option value="jordanian">Jordanian</option>
+                                    <option value="kazakhstani">Kazakhstani</option>
+                                    <option value="kenyan">Kenyan</option>
+                                    <option value="kittian and nevisian">Kittian and Nevisian</option>
+                                    <option value="kuwaiti">Kuwaiti</option>
+                                    <option value="kyrgyz">Kyrgyz</option>
+                                    <option value="laotian">Laotian</option>
+                                    <option value="latvian">Latvian</option>
+                                    <option value="lebanese">Lebanese</option>
+                                    <option value="liberian">Liberian</option>
+                                    <option value="libyan">Libyan</option>
+                                    <option value="liechtensteiner">Liechtensteiner</option>
+                                    <option value="lithuanian">Lithuanian</option>
+                                    <option value="luxembourger">Luxembourger</option>
+                                    <option value="macedonian">Macedonian</option>
+                                    <option value="malagasy">Malagasy</option>
+                                    <option value="malawian">Malawian</option>
+                                    <option value="malaysian">Malaysian</option>
+                                    <option value="maldivan">Maldivan</option>
+                                    <option value="malian">Malian</option>
+                                    <option value="maltese">Maltese</option>
+                                    <option value="marshallese">Marshallese</option>
+                                    <option value="mauritanian">Mauritanian</option>
+                                    <option value="mauritian">Mauritian</option>
+                                    <option value="mexican">Mexican</option>
+                                    <option value="micronesian">Micronesian</option>
+                                    <option value="moldovan">Moldovan</option>
+                                    <option value="monacan">Monacan</option>
+                                    <option value="mongolian">Mongolian</option>
+                                    <option value="moroccan">Moroccan</option>
+                                    <option value="mosotho">Mosotho</option>
+                                    <option value="motswana">Motswana</option>
+                                    <option value="mozambican">Mozambican</option>
+                                    <option value="namibian">Namibian</option>
+                                    <option value="nauruan">Nauruan</option>
+                                    <option value="nepalese">Nepalese</option>
+                                    <option value="new zealander">New Zealander</option>
+                                    <option value="ni-vanuatu">Ni-Vanuatu</option>
+                                    <option value="nicaraguan">Nicaraguan</option>
+                                    <option value="nigerien">Nigerien</option>
+                                    <option value="north korean">North Korean</option>
+                                    <option value="northern irish">Northern Irish</option>
+                                    <option value="norwegian">Norwegian</option>
+                                    <option value="omani">Omani</option>
+                                    <option value="pakistani">Pakistani</option>
+                                    <option value="palauan">Palauan</option>
+                                    <option value="panamanian">Panamanian</option>
+                                    <option value="papua new guinean">Papua New Guinean</option>
+                                    <option value="paraguayan">Paraguayan</option>
+                                    <option value="peruvian">Peruvian</option>
+                                    <option value="polish">Polish</option>
+                                    <option value="portuguese">Portuguese</option>
+                                    <option value="qatari">Qatari</option>
+                                    <option value="romanian">Romanian</option>
+                                    <option value="russian">Russian</option>
+                                    <option value="rwandan">Rwandan</option>
+                                    <option value="saint lucian">Saint Lucian</option>
+                                    <option value="salvadoran">Salvadoran</option>
+                                    <option value="samoan">Samoan</option>
+                                    <option value="san marinese">San Marinese</option>
+                                    <option value="sao tomean">Sao Tomean</option>
+                                    <option value="saudi">Saudi</option>
+                                    <option value="scottish">Scottish</option>
+                                    <option value="senegalese">Senegalese</option>
+                                    <option value="serbian">Serbian</option>
+                                    <option value="seychellois">Seychellois</option>
+                                    <option value="sierra leonean">Sierra Leonean</option>
+                                    <option value="singaporean">Singaporean</option>
+                                    <option value="slovakian">Slovakian</option>
+                                    <option value="slovenian">Slovenian</option>
+                                    <option value="solomon islander">Solomon Islander</option>
+                                    <option value="somali">Somali</option>
+                                    <option value="south african">South African</option>
+                                    <option value="south korean">South Korean</option>
+                                    <option value="spanish">Spanish</option>
+                                    <option value="sri lankan">Sri Lankan</option>
+                                    <option value="sudanese">Sudanese</option>
+                                    <option value="surinamer">Surinamer</option>
+                                    <option value="swazi">Swazi</option>
+                                    <option value="swedish">Swedish</option>
+                                    <option value="swiss">Swiss</option>
+                                    <option value="syrian">Syrian</option>
+                                    <option value="taiwanese">Taiwanese</option>
+                                    <option value="tajik">Tajik</option>
+                                    <option value="tanzanian">Tanzanian</option>
+                                    <option value="thai">Thai</option>
+                                    <option value="togolese">Togolese</option>
+                                    <option value="tongan">Tongan</option>
+                                    <option value="trinidadian or tobagonian">Trinidadian or Tobagonian</option>
+                                    <option value="tunisian">Tunisian</option>
+                                    <option value="turkish">Turkish</option>
+                                    <option value="tuvaluan">Tuvaluan</option>
+                                    <option value="ugandan">Ugandan</option>
+                                    <option value="ukrainian">Ukrainian</option>
+                                    <option value="uruguayan">Uruguayan</option>
+                                    <option value="uzbekistani">Uzbekistani</option>
+                                    <option value="venezuelan">Venezuelan</option>
+                                    <option value="vietnamese">Vietnamese</option>
+                                    <option value="welsh">Welsh</option>
+                                    <option value="yemenite">Yemenite</option>
+                                    <option value="zambian">Zambian</option>
+                                    <option value="zimbabwean">Zimbabwean</option>
+                                </select>
                             </div>
 
                             <div class="radios">
@@ -254,21 +505,21 @@
                                             <option value="Layout">Layout
                                                 (Layout
                                                 Artist)</option>
-                                            <option value="Video">Video (Video
-                                                Producer)</option>
+                                            <!--<option value="Video">Video (Video
+                                                Producer)</option>-->
                                             <option
-                                                value="Art and Design - Graphic Designer">Art
+                                                value="A&D - GD">Art
                                                 and Design (Graphic
                                                 Designer)</option>
                                             <option
-                                                value="Art and Design - Illustrator">Art
+                                                value="A&D - Illus">Art
                                                 and Design
                                                 (Illustrator)</option>
                                             <option
-                                                value="Digital Media - Web Developer">Digital
+                                                value="DM - WebDev">Digital
                                                 Media (Web Developer)</option>
                                             <option
-                                                value="Digital Media - Social Media Correspondence">Digital
+                                                value="DM - SocMed">Digital
                                                 Media (Social Media
                                                 Correspondence)</option>
                                             <option
@@ -283,30 +534,38 @@
                                                 choice
                                                 --</option>
                                             <option value="N/A">N/A</option>
-                                            <option value="Pulse">Pulse</option>
-                                            <option value="BLIP">BLIP</option>
+                                            <option value="Pulse">Pulse (News
+                                                Writer)</option>
+                                            <option value="BLIP">BLIP (Features
+                                                Writer)</option>
                                             <option
-                                                value="Karilyon">Karilyon</option>
+                                                value="Karilyon">Karilyon
+                                                (Manunulat)</option>
                                             <option
-                                                value="Ablaze">Ablaze</option>
+                                                value="Ablaze">Ablaze
+                                                (Sports
+                                                Writer)</option>
                                             <option
-                                                value="Layout">Layout</option>
-                                            <option value="Video">Video</option>
+                                                value="Layout">Layout
+                                                (Layout
+                                                Artist)</option>
+                                            <!--<option value="Video">Video (Video
+                                                Producer)</option>-->
                                             <option
-                                                value="Art and Design - Graphic Designer">Art
-                                                and Design - Graphic
-                                                Designer</option>
+                                                value="A&D - GD">Art
+                                                and Design (Graphic
+                                                Designer)</option>
                                             <option
-                                                value="Art and Design - Illustrator">Art
-                                                and Design -
-                                                Illustrator</option>
+                                                value="A&D - Illus">Art
+                                                and Design
+                                                (Illustrator)</option>
                                             <option
-                                                value="Digital Media - Web Developer">Digital
-                                                Media - Web Developer</option>
+                                                value="DM - WebDev">Digital
+                                                Media (Web Developer)</option>
                                             <option
-                                                value="Digital Media - Social Media Correspondence">Digital
-                                                Media - Social Media
-                                                Correspondence</option>
+                                                value="DM - SocMed">Digital
+                                                Media (Social Media
+                                                Correspondence)</option>
                                             <option
                                                 value="Managing">Managing</option>
                                         </select>
@@ -318,30 +577,38 @@
                                             <option value>-- Select third choice
                                                 --</option>
                                             <option value="N/A">N/A</option>
-                                            <option value="Pulse">Pulse</option>
-                                            <option value="BLIP">BLIP</option>
+                                            <option value="Pulse">Pulse (News
+                                                Writer)</option>
+                                            <option value="BLIP">BLIP (Features
+                                                Writer)</option>
                                             <option
-                                                value="Karilyon">Karilyon</option>
+                                                value="Karilyon">Karilyon
+                                                (Manunulat)</option>
                                             <option
-                                                value="Ablaze">Ablaze</option>
+                                                value="Ablaze">Ablaze
+                                                (Sports
+                                                Writer)</option>
                                             <option
-                                                value="Layout">Layout</option>
-                                            <option value="Video">Video</option>
+                                                value="Layout">Layout
+                                                (Layout
+                                                Artist)</option>
+                                            <!--<option value="Video">Video (Video
+                                                Producer)</option>-->
                                             <option
-                                                value="Art and Design - Graphic Designer">Art
-                                                and Design - Graphic
-                                                Designer</option>
+                                                value="A&D - GD">Art
+                                                and Design (Graphic
+                                                Designer)</option>
                                             <option
-                                                value="Art and Design - Illustrator">Art
-                                                and Design -
-                                                Illustrator</option>
+                                                value="A&D - Illus">Art
+                                                and Design
+                                                (Illustrator)</option>
                                             <option
-                                                value="Digital Media - Web Developer">Digital
-                                                Media - Web Developer</option>
+                                                value="DM - WebDev">Digital
+                                                Media (Web Developer)</option>
                                             <option
-                                                value="Digital Media - Social Media Correspondence">Digital
-                                                Media - Social Media
-                                                Correspondence</option>
+                                                value="DM - SocMed">Digital
+                                                Media (Social Media
+                                                Correspondence)</option>
                                             <option
                                                 value="Managing">Managing</option>
                                         </select>
@@ -352,8 +619,7 @@
                             <!-- Google Drive Link -->
                             <div class="form-group">
                                 <label for="googleDriveLink"
-                                    class="required">Google
-                                    Drive Link</label>
+                                    class="required">Portfolio Link</label>
                                 <input type="url" id="googleDriveLink"
                                     name="GDrive Link"
                                     placeholder="https://drive.google.com/my.drive.link/"
@@ -364,10 +630,105 @@
                         </div>
                     </div>
 
-                    <button type="submit">Submit</button>
+                    <div class="button-wrapper"><button type="submit"><b>SUBMIT</b></button></div> 
                 </form>
             </div>
         </section>
+
+        <!--Recent Publications/Folios-->
+
+        <section class="releases" id="Releases">
+            <div class="wrapper">
+                <p>Recent Releases</p>
+                <div class="bar"></div>
+                <div class="releases-wrapper">
+                    <div class="solstice">
+
+                    </div>
+                    <div class="metro">
+
+                    </div>
+                    <div class="elysium">
+
+                    </div>
+                    <div class="tb26">
+
+                    </div>
+                    <div class="tb25">
+
+                    </div>
+                    <div class="halalan">
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+
+        <footer>
+            <div class="wrapper">
+                <div class="footer-top">
+                    <div class="footer-left">
+                        <div class="thebenildean-logo">
+                            <img src="assets/icons/the benildean.webp" alt="thebenildean-logo" />
+                        </div>
+                        <div class="logo-subtext">
+                            The official student publication of De La Salle-College of Saint Benilde, published by a team of writers and artists from the Benildean Press Corps.
+                        </div>
+                    </div>
+        
+                    <div class="socials">
+                        <p class="socials-header">Stay connected:</p>
+                        <div class="socials-body">
+                            <a href="https://www.facebook.com/thebenildean" target="_blank"><img src="assets/icons/facebook.webp" alt="facebook"/></a>
+                            <a href="https://www.instagram.com/thebenildean/" target="_blank"><img src="assets/icons/instagram.webp" alt="instagram"/></a>
+                            <a href="https://x.com/TheBenildean" target="_blank"><img src="assets/icons/x.webp" alt="x"/></a>
+                            <a href="https://www.tiktok.com/@thebenildean" target="_blank"><img src="assets/icons/tiktok.webp" alt="tiktok"/></a>
+                            <p class="socials-body-text">thebenildean</p>
+                            <a href="https://read.thebenildean.org/" target="_blank"><img src="assets/icons/web.webp" alt="web"/></a>
+                            <a href="https://read.thebenildean.org/" target="_blank" style="color:#fff"><p class="socials-body-text">read.thebenildean.org</p></a>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="footer-bottom">
+                    <div class="footer-bottom-address">
+                        <div class="icon">
+                            <img src="assets/icons/pin.webp" alt="icon-pin" />
+                        </div>
+                        <div class="text">
+                            Student Publications Office, R902 9F The Atrium @Benilde, 1040 Arellano Ave. Corner C. Ayala Street, Don Pedro St., Manila, Philippines
+                        </div>
+                    </div>
+        
+                    <div class="footer-bottom-address footer-bottom2">
+                        <div class="icon">
+                            <img src="assets/icons/phone.webp" alt="icon-phone" />
+                        </div>
+                        <div class="text" style="color: #fff;">
+                            <b>Phone</b><br>05 (02) 230 5100 loc. 7521
+                        </div>
+                    </div>
+        
+                    <div class="footer-bottom-address">
+                        <div class="icon">
+                            <img src="assets/icons/mail.webp" alt="icon-mail" />
+                        </div>
+                        <div class="text">
+                            <b>Email</b><br>
+                            <a class="email-link" href="mailto:thebenildean@benilde.edu.ph" style="color:#fff">
+                                thebenildean@benilde.edu.ph
+                            </a>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="footer-copyright">
+                    Benildean Press Corps © 2025. All rights reserved.
+                </div>
+            </div>
+        </footer>
 
         <script src="script.js"></script>
     </body>

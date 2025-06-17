@@ -55,19 +55,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // Nationality validation
-    const nationalityInput = document.getElementById('nationality');
-    const nationalityError = document.getElementById('nationalityError');
-
-    nationalityInput.addEventListener('blur', function() {
-        const value = this.value;
-        if (value.length < 1 || value.length > 30) {
-            nationalityError.textContent = 'Nationality must be between 1 and 30 characters long';
-        } else {
-            nationalityError.textContent = '';
-        }
-    });
-
     // Transferee and Second Degree checkbox functionality
     const transfereeCheckbox = document.querySelector('input[name="Transferee"]');
     const secondDegreeCheckbox = document.querySelector('input[name="Second Degree"]');
@@ -146,8 +133,8 @@ document.addEventListener('DOMContentLoaded', function() {
     
     termsLeftInput.addEventListener('blur', function() {
         const value = parseInt(this.value);
-        if (isNaN(value) || value < 1 || value > 15) {
-            termsLeftError.textContent = 'Number of terms left must be between 1 and 15';
+        if (isNaN(value) || value < 6 || value > 15) {
+            termsLeftError.textContent = 'Number of terms left must be between 6 and 15';
         } else {
             termsLeftError.textContent = '';
         }
@@ -199,12 +186,6 @@ document.addEventListener('DOMContentLoaded', function() {
             emailError.textContent = 'Please enter a valid b-mail address';
             isValid = false;
         }
-    
-        const nationalityValue = nationalityInput.value;
-        if (nationalityValue.length < 1 || nationalityValue.length > 30) {
-            nationalityError.textContent = 'Nationality must be between 1 and 30 characters long';
-            isValid = false;
-        }
 
         // Set applicantTypeStatus based on transferee/second degree status
         const applicantTypeStatus = (isTransferee || isSecondDegree) ? 'Yes' : 'No';
@@ -222,8 +203,8 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     
         const termsValue = parseInt(termsLeftInput.value);
-        if (isNaN(termsValue) || termsValue < 1 || termsValue > 15) {
-            termsLeftError.textContent = 'Number of terms left must be between 1 and 15';
+        if (isNaN(termsValue) || termsValue < 6 || termsValue > 15) {
+            termsLeftError.textContent = 'Number of terms left must be between 6 and 15';
             isValid = false;
         }
     
@@ -271,13 +252,13 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
               })
               .then(data => {
-                alert('Form submitted successfully!');
+                alert('Form submitted successfully. Thank you for applying!');
                 form.reset();
                 scholarshipDetailsInput.disabled = true;
               })
               .catch(error => {
                 console.error('Submission error:', error);
-                alert('Form submitted successfully!');
+                alert('Form submitted successfully. Thank you for applying!');
                 form.reset();
                 scholarshipDetailsInput.disabled = true;
               })
