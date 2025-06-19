@@ -1,4 +1,13 @@
 document.addEventListener('DOMContentLoaded', function() {
+
+    // Navigation Toggle
+    const hamburger = document.getElementById("hamburger");
+    const navDropdown = document.getElementById("nav-dropdown");
+
+    hamburger.addEventListener("click", function () {
+      navDropdown.classList.toggle("show");
+    });
+    
     const form = document.getElementById('studentForm');
 
     // Name format validation
