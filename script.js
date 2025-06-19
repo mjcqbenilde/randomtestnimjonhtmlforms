@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-
+    
     // Navigation Toggle
     const hamburger = document.getElementById("hamburger");
     const navDropdown = document.getElementById("nav-dropdown");
@@ -7,6 +7,9 @@ document.addEventListener('DOMContentLoaded', function() {
     hamburger.addEventListener("click", function () {
       navDropdown.classList.toggle("show");
     });
+
+
+    // Submission form
     
     const form = document.getElementById('studentForm');
 
@@ -261,13 +264,13 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
               })
               .then(data => {
-                alert('Form submitted successfully. Thank you for applying!');
+                alert('Form submitted successfully!');
                 form.reset();
                 scholarshipDetailsInput.disabled = true;
               })
               .catch(error => {
                 console.error('Submission error:', error);
-                alert('Form submitted successfully. Thank you for applying!');
+                alert('Form submitted successfully!');
                 form.reset();
                 scholarshipDetailsInput.disabled = true;
               })
