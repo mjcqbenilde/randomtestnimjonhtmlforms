@@ -23,6 +23,7 @@ body {
 .wrapper {
     margin: 0 auto;
     max-width: 1200px;
+    overflow-x: hidden !important
 }
 
 /*Header*/
