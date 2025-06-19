@@ -8,7 +8,6 @@ document.addEventListener('DOMContentLoaded', function() {
       navDropdown.classList.toggle("show");
     });
 
-
     // Submission form
     
     const form = document.getElementById('studentForm');
