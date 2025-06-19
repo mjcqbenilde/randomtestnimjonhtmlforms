@@ -16,6 +16,23 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
+    // Modal Video
+    var modal = document.getElementById("vidModal");
+    var btn = document.getElementById("vidBtn");
+    var span = document.getElementsByClassName("close")[0];
+
+    btn.onclick = function() {
+        modal.style.display = "block";
+    }
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+
     // Submission form
     
     const form = document.getElementById('studentForm');
