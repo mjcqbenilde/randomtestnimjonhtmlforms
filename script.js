@@ -6,6 +6,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
     hamburger.addEventListener("click", function () {
       navDropdown.classList.toggle("show");
+      navDropdown.classList.toggle("hidden");
+    });
+
+    window.addEventListener("scroll", function () {
+        if (navDropdown.classList.contains("show")) {
+            navDropdown.classList.remove("show");
+            navDropdown.classList.add("hidden");
+        }
     });
 
     // Submission form
