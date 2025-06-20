@@ -53,6 +53,9 @@ header .logo img{
 header .hamburger {
     cursor: pointer;
 }
+header .hamburger:hover, .nav-menu ul li:hover {
+    background-color: #3f3f3c;
+}
 header .hamburger img{
     width: 40px;
     height: auto;
@@ -264,7 +267,7 @@ nav ul li a{
 /*Forms*/
 
 .submission {
-    height: 100vh;
+    height: auto;
 }
 
 .submission p {
