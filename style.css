@@ -44,7 +44,6 @@ header .wrapper {
     padding: 10px 20px;
     position: relative;
     overflow-x: visible;
-    
 }
 header .logo img{
     width: 350px;
@@ -52,16 +51,18 @@ header .logo img{
 }
 header .hamburger {
     cursor: pointer;
-}
-header .hamburger:hover, .nav-menu ul li:hover {
-    background-color: #3f3f3c;
+    border-radius: 10px;
 }
 header .hamburger img{
     width: 40px;
     height: auto;
 }
+header .hamburger:hover, .nav-menu ul li:hover {
+    animation: hoverAnimation 0.3s ease-in-out forwards;
+}
 nav {
     transition: all 0.4s ease;
+    position: relative;
 }
 nav ul {
     list-style: none;
@@ -89,10 +90,21 @@ nav ul li a{
     flex-direction: column;
 }
 .nav-menu ul li {
-    margin: 10px 0;
     text-align: center;
+    width: 240px;
+    height: 40px;
     font-family: "Staatliches", sans-serif;
     font-size: 20px;
+    padding-top: 15px;
+}
+.nav-menu ul li:hover, header .hamburger:hover {
+    animation: navHoverAnimation 0.3s ease-in-out forwards;
+}
+.nav-menu ul li:first-child {
+    margin-top: -3px;
+}
+.nav-menu ul li:last-child {
+    margin-bottom: -9px;
 }
 .nav-menu ul li a {
     color: #fff;
@@ -102,6 +114,9 @@ nav ul li a{
 }
 .nav-menu.show{
     display: flex;
+}
+@keyframes navHoverAnimation {
+    to { background-color: #3f3f3c; }
 }
 
 @media only screen and (max-width: 480px) {
@@ -216,7 +231,7 @@ nav ul li a{
     height: auto; 
 }
 .close{
-    color: #aaa;
+    color: #fff;
     float: right;
     font-size: 28px;
     font-weight: bold;
@@ -224,7 +239,7 @@ nav ul li a{
 }
 .close:hover,
 .close:focus {
-    color: #151514;
+    color: #3f3f3c;
     text-decoration: none;
     cursor: pointer;
 }
@@ -332,7 +347,10 @@ button {
     margin-right: 20px; margin-bottom: 20px;
 }
 button:hover {
-    background-color: #74c5b6;
+    animation: formButtonHoverAnimation 0.3s ease-in-out forwards;
+}
+@keyframes formButtonHoverAnimation {
+    to { background-color: #74c5b6; }
 }
 .required:after {
     content: " *";
@@ -405,6 +423,9 @@ button:hover {
 }
 
 /*Recent Releases*/
+.releases{
+    
+}
 .releases .wrapper {
     display: flex;
     flex-direction: column;
@@ -417,7 +438,6 @@ button:hover {
     font-size: 64px;
     color: #268d7b;
     margin: 20px;
-    margin-top: 50px;
 }
 .releases .bar {
     width: 225px;
